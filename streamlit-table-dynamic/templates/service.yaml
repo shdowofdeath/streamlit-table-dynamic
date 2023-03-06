@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "streamlit-table-dynamic.fullname" . }}
+  labels:
+    {{- include "streamlit-table-dynamic.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "streamlit-table-dynamic.selectorLabels" . | nindent 4 }}
