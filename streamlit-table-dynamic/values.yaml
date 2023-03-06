@@ -39,6 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+  dnsName: tables-dynamic
 
 ingress:
   enabled: false
@@ -77,6 +78,9 @@ autoscaling:
 
 nodeSelector: {}
 
-tolerations: []
+tolerations:
+- key: "kubernetes.azure.com/scalesetpriority"
+  vaule: "spot"
+  effect: "NoSchedule"
 
 affinity: {}
