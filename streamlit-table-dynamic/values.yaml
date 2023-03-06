@@ -80,7 +80,7 @@ nodeSelector: {}
 
 tolerations:
 - key: "kubernetes.azure.com/scalesetpriority"
-  vaule: "spot"
+  value: "spot"
   effect: "NoSchedule"
 
 affinity: {}
