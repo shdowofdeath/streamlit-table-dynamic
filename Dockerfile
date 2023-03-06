@@ -20,5 +20,5 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Run server
-aCMD ["streamlit", "run" , "app.py","--server.port","80"]
+CMD ["streamlit", "run" , "app.py","--server.port","80"]
    
