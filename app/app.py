@@ -9,7 +9,7 @@ if os.path.exists("data.csv"):
 else:
     df = pd.DataFrame(
         [
-        {"student name": "sharon", "score": 90, "gender": st.selectbox(geneder)},
+        {"student name": "sharon", "score": 90, "gender": geneder[0]},
         {"student name": "dola", "score": 99, "gender": geneder[1]},
         {"student name": "pira", "score": 95, "gender": geneder[2]},
     ]
